@@ -1,0 +1,30 @@
+TITLE Determine NH3(aq) in Frasassi stream water
+
+SOLUTION 1  PC21-3a with general PC values 
+        units   mmole/l
+        pH	7.2	
+        density	1	
+        temp	13.8	
+        N(-3)	0.129	 as NH4
+        Ca	3.5	
+        Mg 	1.3	
+        K	0.7	
+        Na	17.8	
+        Cl	19.5	-charge #adjusted Cl to charge balance
+        S(6)         	1.8	
+        C	4.7	#this should be total carbon, read up!
+        O(0)	0.025	
+#        sulfate	1.8	
+#        sulfide		
+SAVE solution 1
+
+SELECTED_OUTPUT
+		-reset false
+		-file	/Users/danjones/test1.sel
+		-simulation	true
+		-state	true
+		-reaction	true
+		-gas CO2(g) CH4(g) N2(g) NH3(g)
+		-si CO2(g) CH4(g) N2(g) NH3(g) 	#this will give the saturation indices for the indicated minerals
+END
+
